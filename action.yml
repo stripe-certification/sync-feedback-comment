@@ -1,11 +1,12 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Sync feedback comment'
+description: 'Given a PR, "upsert" a comment with the given message'
 inputs:
-  milliseconds: # change this
+  pull_request_url:
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: 'Pull Request URL'
+  message:
+    required: true
+    description: 'Markdown message'
 runs:
   using: 'node16'
   main: 'dist/index.js'
